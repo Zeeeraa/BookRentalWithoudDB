@@ -5,6 +5,7 @@
             <td> ID </td>
             <td> Name </td>
             <td> Surname </td>
+            <th>Birth Date</th>
             <td> </td>
         </tr>
     </thead>
@@ -15,6 +16,8 @@
         <td> @item.ID </td>
         <td> @item.Name </td>
         <td> @item.Surname </td>
+        <td> @item.BirthDate.ToShortDateString()</td>
+
         <td><a asp-controller="Student" asp-action="Detail" 
             asp-route-id="@item.ID"> Click For Detail </a></td>
     </tr>
@@ -23,4 +26,5 @@
 
 </tbody>
 </table>
+<a asp-controller="Student" asp-action="Create"> Add New Student </a>
 
